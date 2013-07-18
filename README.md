@@ -7,8 +7,8 @@ A full implementation of the Google Analytics SDK. As of this writing the SDK is
 	var Analytics = require("com.animecyc.analytics"),
 		tracker = Analytics.getTracker('UA-XXXXXXX-X');
 
-		Analytics.setDebug(true);
-		tracker.trackScreen('Home');
+	Analytics.setDebug(true);
+	tracker.trackScreen('Home');
 
 ## Module Reference
 
