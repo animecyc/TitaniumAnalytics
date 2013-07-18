@@ -1,0 +1,12 @@
+version: 1.0
+apiversion: 2
+description: Google Analytics 2.0 SDK for Titanium
+author: Seth Benjamin
+license: MIT
+copyright: Copyright © 2013 Seth Benjamin <animecyc@gmail.com>
+
+name: TitaniumAnalytics
+moduleid: com.animecyc.analytics
+guid: 16C71364-6048-4C8C-A7B6-5B89322F1FF9
+platform: iphone
+minsdk: 3.1.1.GA
