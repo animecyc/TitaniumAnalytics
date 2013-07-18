@@ -12,8 +12,6 @@ A full implementation of the Google Analytics SDK. As of this writing the SDK is
 
 ## Module Reference
 
-- - -
-
 ### Analytics.getTracker(uaCode);
 
 Get an instance of a tracker and creates it if it does not exist. Calling `getTracker` on the same UA code will return a reference to the tracker.
@@ -69,8 +67,6 @@ If set to true, all trackers will cease to dispatch anything tracked.
 	- Boolean flag to globally opt-out of all analytics tracking.
 
 ## Tracker Reference
-
-- - -
 
 ### Tracker.trackScreen(screenName);
 
@@ -143,8 +139,6 @@ Track an individual screen, optionally send a screen name with the hit.
 	- A string containing the URL used as a referrer, typically used in a campaign to track where people are coming from.
 
 ## Transaction Reference
-
-- - -
 
 ### setTax(tax)
 
