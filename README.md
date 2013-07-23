@@ -1,6 +1,9 @@
 # TitaniumAnalytics Module
 
-A full implementation of the Google Analytics SDK. As of this writing the SDK is at v2.0b4 and is not compatible with the legacy application analytics profiles. This implementation supports multiple trackers at the same time so long as all trackers adhere to Google Analytics quotas and limitations on aggregate tracking.
+A full implementation of the Google Analytics SDK for iOS and Android. As of this writing
+the SDK is at v2.0b4 and v2.0b5 respectively and is not compatible with the legacy application
+analytics profiles. This implementation supports multiple trackers at the same time so long as
+all trackers adhere to Google Analytics quotas and limitations on aggregate tracking.
 
 ## Usage
 
@@ -9,12 +12,16 @@ A full implementation of the Google Analytics SDK. As of this writing the SDK is
 
 	Analytics.setDebug(true);
 	tracker.trackScreen('Home');
+	
+> If you are building the Android module, make sure you update
+> the `.classpath` and `build.properties` files to match your setup.
 
 ## Module Reference
 
 ### Analytics.getTracker(uaCode);
 
-Get an instance of a tracker and creates it if it does not exist. Calling `getTracker` on the same UA code will return a reference to the tracker.
+Get an instance of a tracker and creates it if it does not exist. Calling `getTracker` on
+the same UA code will return a reference to the tracker.
 
 - uaCode (String):
 	- The tracker identifier from a compatible google analytics profile.
@@ -40,21 +47,24 @@ Create a transaction (ECommerce) to be sent via a tracker.
 
 ### Analytics.setDebug(debug);
 
-Set the debug flag, will result in messages being logged to the console. Ensure you don't leave this enabled for production.
+Set the debug flag, will result in messages being logged to the console. Ensure you don't
+leave this enabled for production.
 
 - debug (Boolean):
 	- Debug status flag
 
 ### Analytics.setDispatchInterval(dispatchInterval);
 
-Set the dispatch interval; All hits are queued and will be sent on an interval firing on the interval set by this method. By default queues are dispatched every 120 seconds.
+Set the dispatch interval; All hits are queued and will be sent on an interval firing on the
+interval set by this method. By default queues are dispatched every 120 seconds.
 
 - dispatchInterval (Float):
 	- Interval at which hits are dispatched automatically.
 
 ### Analytics.setTrackUncaughtExceptions(trackUncaught);
 
-Track exceptions not caught from the application. Exceptions caught by means of this flag being set to `true` are always reported as fatal.
+Track exceptions not caught from the application. Exceptions caught by means of this flag
+being set to `true` are always reported as fatal.
 
 - trackUncaught (Boolean):
 	- Boolean flag to catch uncaught exceptions.
@@ -111,7 +121,8 @@ Track an individual screen, optionally send a screen name with the hit.
 ### Tracker.setAnonymize(anonymize);
 
 - anonymize (Boolean):
-	- If set to `true` the tracker will anonymize the users session. Typically this will scramble the last octets of a users IP address.
+	- If set to `true` the tracker will anonymize the users session. Typically this will
+	scramble the last octets of a users IP address.
 
 ### Tracker.setUseHttps(useHttps);
 
@@ -121,7 +132,8 @@ Track an individual screen, optionally send a screen name with the hit.
 ### Tracker.setSampleRate(sampleRate);
 
 - sampleRate (Float):
-	- This will limit the number of hits sent to Google Analytics. It can range from `0` to `100`. This is useful if your application has a large number of users.
+	- This will limit the number of hits sent to Google Analytics. It can range from `0`
+	to `100`. This is useful if your application has a large number of users.
 
 ### Tracker.setSessionTimeout(sessionTimeout);
 
@@ -131,12 +143,13 @@ Track an individual screen, optionally send a screen name with the hit.
 ### Tracker.setCampaignUrl(campaignUrl);
 
 - campaignUrl (String):
-	- A string containing the URL used in analytics campaigns.
+	- A string containing the URL parameters used in analytics campaigns.
 
 ### Tracker.setReferrerUrl(referrerUrl);
 
 - referrerUrl (String):
-	- A string containing the URL used as a referrer, typically used in a campaign to track where people are coming from.
+	- A string containing the URL used as a referrer, typically used in a campaign to
+	track where people are coming from.
 
 ## Transaction Reference
 
@@ -153,7 +166,8 @@ Track an individual screen, optionally send a screen name with the hit.
 ### setRevenue(revenue)
 
 - revenue (Float):
-	- The total revenue for the transaction. This must be updated manually as adding items will not automatically increment this value.
+	- The total revenue for the transaction. This must be updated manually as adding items
+	will not automatically increment this value.
 
 ### addItem(itemOptions)
 

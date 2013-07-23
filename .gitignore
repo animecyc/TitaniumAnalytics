@@ -1,3 +1,8 @@
 build/
+bin/
+dist/
+tmp/
+.settings/
+.apt_generated/
 *.zip
 *.xcuserdatad
