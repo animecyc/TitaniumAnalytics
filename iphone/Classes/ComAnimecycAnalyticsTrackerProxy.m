@@ -151,7 +151,7 @@
     ENSURE_SINGLE_ARG(anonymize, NSNumber);
 
     [tracker setAnonymize:[anonymize boolValue]];
-    [ComAnimecycAnalyticsModule debugWithMessage:[NSString stringWithFormat:@"anonymous sessions has been %@", [anonymize boolValue] ? @"enabled" : @"disabled"]];
+    [ComAnimecycAnalyticsModule debugWithMessage:[NSString stringWithFormat:@"Anonymous sessions has been %@", [anonymize boolValue] ? @"enabled" : @"disabled"]];
 }
 
 - (void)setUseHttps:(id)useHttps
@@ -169,7 +169,7 @@
     ENSURE_SINGLE_ARG(sampleRate, NSNumber);
 
     [tracker setSampleRate:[sampleRate doubleValue]];
-    [ComAnimecycAnalyticsModule debugWithMessage:[NSString stringWithFormat:@"Settings sample rate to: %@", sampleRate]];
+    [ComAnimecycAnalyticsModule debugWithMessage:[NSString stringWithFormat:@"Setting sample rate to: %@", sampleRate]];
 }
 
 - (void)setSessionTimeout:(id)sessionTimeout
