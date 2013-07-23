@@ -74,6 +74,10 @@ static BOOL debugging = NO;
 {
     ENSURE_SINGLE_ARG(accountId, NSString);
 
+    NSString* debugMessage = @"Getting tracker with ID: ";
+
+    [ComAnimecycAnalyticsModule debugWithMessage:[debugMessage stringByAppendingString:accountId]];
+
     return [[[ComAnimecycAnalyticsTrackerProxy alloc] initWithAccountId:accountId] autorelease];
 }
 
@@ -91,6 +95,8 @@ static BOOL debugging = NO;
 
 - (id)getDefaultTracker:(id)args
 {
+    [ComAnimecycAnalyticsModule debugWithMessage:@"Getting default tracker.";
+
     return [[[ComAnimecycAnalyticsTrackerProxy alloc] initWithDefault] autorelease];
 }
 
