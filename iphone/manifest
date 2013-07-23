@@ -3,7 +3,7 @@ apiversion: 2
 description: Google Analytics 2.0 SDK for Titanium
 author: Seth Benjamin
 license: MIT
-copyright: Copyright © 2013 Seth Benjamin <animecyc@gmail.com>
+copyright: Copyright (c) 2013 Seth Benjamin <animecyc@gmail.com>
 
 name: TitaniumAnalytics
 moduleid: com.animecyc.analytics
