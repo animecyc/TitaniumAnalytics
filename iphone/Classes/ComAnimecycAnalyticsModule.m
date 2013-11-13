@@ -95,7 +95,7 @@ static BOOL debugging = NO;
 
 - (id)getDefaultTracker:(id)args
 {
-    [ComAnimecycAnalyticsModule debugWithMessage:@"Getting default tracker.";
+    [ComAnimecycAnalyticsModule debugWithMessage:@"Getting default tracker."];
 
     return [[[ComAnimecycAnalyticsTrackerProxy alloc] initWithDefault] autorelease];
 }
