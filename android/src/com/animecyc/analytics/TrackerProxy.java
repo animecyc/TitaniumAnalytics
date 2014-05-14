@@ -68,11 +68,13 @@ public class TrackerProxy extends KrollProxy
 	@Kroll.method
 	public void trackEvent(KrollDict eventOptions)
 	{
+		Long longValue = (eventOptions.get("value") != null) ? Long.parseLong(TiConvert.toString(eventOptions.get("value"))) : null;
+		
 		tracker.sendEvent(
-			TiConvert.toString(eventOptions.get("event")),
+			TiConvert.toString(eventOptions.get("category")),
 			TiConvert.toString(eventOptions.get("action")),
 			TiConvert.toString(eventOptions.get("label")),
-			Long.parseLong(TiConvert.toString(eventOptions.get("value")))
+			longValue
 		);
 
 		debugMessage("Queueing event hit with arguments: " + eventOptions);
